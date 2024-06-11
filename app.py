@@ -3,6 +3,7 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -49,9 +50,9 @@ def perform_prediction(image):
 def hello_world():
       if (request.method == 'POST'):
             image = request.files["image"].read()
-            
 
-            return ("the prediction is "+ perform_prediction(image))
+            label = perform_prediction(image)
+            return("the prediction is"+ label)
            
       else:
          # return("prediction here "+perform_prediction("D:/ml/flask/fruits_and_platns_classification/img/apple.jpg"))
