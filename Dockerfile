@@ -1,5 +1,5 @@
 FROM python:3.11.4-slim
-WORKDIR G:\rejens_dai\fruits_and_platns_classification
+WORKDIR G:\fruits_and_platns_classification
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
