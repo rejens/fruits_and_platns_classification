@@ -15,7 +15,7 @@ def load_model(model_path):
   model = tf.keras.models.load_model(model_path,custom_objects={"KerasLayer":hub.KerasLayer})
   return model
 
-model = load_model("D:/ml/flask/fruits_and_platns_classification/model.h5")
+model = load_model("model.h5")
   
 
 def load_labels():
